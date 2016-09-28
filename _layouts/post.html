@@ -1,25 +1,38 @@
 ---
 layout: default
 ---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="post">
-  <h1>{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
+  <header class="post-header">
+    <h1 class="main-title" itemprop="name headline">{{ page.title }}</h1>
+    <div class="posted post-box">
+      POSTED ON
+      <span class="date-post">
 
-<div class="related">
-  <h2>Related Posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+        {{ page.date | date: "%A, %B %-d, %Y" }}
+      </span>
+      <span class="in">
+        in
+      </span>
+      <span class="categories-on">
+        {% for category in page.categories%}
+        {{category}} &nbsp;{% if forloop.last %}{% else %},{% endif %}
+        {% endfor %}
+      </span>
+      {% if page.author %}
+      <br> <br>
+      <div class="written-by">
+        WRITTEN BY
+      </div>
+      <div class="author-name">
+        {{page.author}}
+      </div>
+      {% endif %}
+    </div>
+      </header>
+
+  <div class="post-content-main" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article>

@@ -1,37 +1,37 @@
 ---
 layout: default
 ---
+<div class="stories">
+  STORIES
+</div>
+<div class="post-content">
+  {% for post in site.posts %}
+  <div class="post-box">
+    <div class="post-title">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+ <a class="post-title" href="{{post.url | prepend:site.baseurl }}" >{{post.title}}</a>
+      <br>
+    </div>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
+    <span class="posted-on">
+POSTED ON
+
+     </span>
+     <span class="date-post"> {{ post.date | date: "%A, %B %-d, %Y" }}</span>
+     <span class="in">
+       in
+     </span>
+     <span class="categories-on">
+       {% for category in post.categories%}
+       {{category}} &nbsp;{% if forloop.last %}{% else %},{% endif %}
+       {% endfor %}
+     </span>
+
+
+    <div class="postExt">
+      {{ post.content | strip_html | truncatewords:20}}
+    </div>
   </div>
   {% endfor %}
-</div>
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="older">Older</a>
-  {% else %}
-    <span class="next">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a href="/" class="newer">Newer</a>
-    {% else %}
-      <a href="/page{{paginator.previous_page}}" class="newer">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="previous">Newer</span>
-  {% endif %}
 </div>
