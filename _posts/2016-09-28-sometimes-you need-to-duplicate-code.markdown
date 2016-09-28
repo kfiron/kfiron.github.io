@@ -13,7 +13,7 @@ Yes, code duplication is the first rule to avoid when we try to provide clean co
 
 trait Context extends Scope{
    val usersManager = new UsersManager()
-   val userId = "some-id"
+   val userId = randomId
    val user  = User(name = userId)
 }
 
@@ -44,3 +44,46 @@ trait Context extends Scope{
 }
 
 {% endhighlight %}
+
+<p>
+Obviousely, we have code duplication in usersManager.create() and usersManager.byId(), let's look in example of this code when we get rid of all code duplications
+</p>
+
+{% highlight java %}
+
+trait Context extends Scope{
+   val usersManager = new UsersManager()
+   val userId = randomId
+   val user  = User(name = userId)
+   def givenUser = usersManager.create(user)  
+   def login(userId: String = userId) = usersManager.byId(userId)
+   def verifyUserCreated = login(userId) must beCreated
+}
+
+"User server" should {
+   "login" should {   
+     "returns not exist for non existing user" in new Context {
+        login must beNotFound  
+     }
+     "returns success for existing user" in new Context {        
+        givenUser must beCreated
+        login must beUserLike(user)
+     }
+   }
+   "register" should {
+    "be created" in new Context {
+      givenUser must beCreated
+      login must beUserLike(user)
+    }
+  }
+  "delete" should {
+    "beDeleted" in new Context {
+      givenUser must beCreated
+      usersManager.delete(userId) must beDeleted
+      verifyUserCreated must beNotFound
+    }
+  }
+}
+
+{% endhighlight %}
+
