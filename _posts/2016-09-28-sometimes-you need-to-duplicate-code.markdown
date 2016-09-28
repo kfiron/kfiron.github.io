@@ -130,6 +130,6 @@ trait Context extends Scope{
 
 {% endhighlight %}
 
-So now we have 2 types of code duplications:
-1. The login uses byId twice, because it is the API for this tests and we don't want to hide it
-2. The abstractions verifyUserCreated/givenUser is hide the API, which we are using in the same file. but we can use this abstraction in more tests in future.
+# So now we have 2 types of code duplications:
+## The login uses byId twice, because it is the API for this tests and we don't want to hide it
+## The abstractions verifyUserCreated/givenUser is hide the API, which we are using in the same file. but we can use this abstraction in more tests in future.
