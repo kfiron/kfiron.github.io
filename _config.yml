@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Kfiron's world
+title: Kfiron's world (Scala, Node & Beyond)
 email: kfirb@wix.com
 description: > # this means to ignore newlines until "baseurl:"
-  Some description
+  In this blog i will dump my thouhts from day to day about software engineering and architecture
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kfiron.github.io" # the base hostname & protocol for your site
 twitter_username: kfirondev
