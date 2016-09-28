@@ -28,20 +28,7 @@ trait Context extends Scope{
         usersManager.create(user) must beCreated
         usersManager.byId(userId) must beUserLike(user)
      }
-   }
-  "register" should {
-    "be created" in new Context {
-      usersManager.create(user) must beCreated
-      usersManager.byId(userId) must beUserLike(user)
-    }
-  }
-  "delete" should {
-    "beDeleted" in new Context {
-      usersManager.create(user) must beCreated
-      usersManager.delete(userId) must beDeleted
-      usersManager.byId(userId) must beNotFound
-    }
-  }
+   }  
 }
 
 {% endhighlight %}
