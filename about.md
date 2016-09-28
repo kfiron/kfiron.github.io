@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Currently the backeng engineering managet @ Wix.com. 
+Currently the backeng engineering manager @ Wix.com. 
 Sometimes I love Scala and the type system, sometimes i love Node.js hacking. 
 I am not into front-end development, but i am enthusiastic about isomorphic code and server side rendereing using Node.js.
 
