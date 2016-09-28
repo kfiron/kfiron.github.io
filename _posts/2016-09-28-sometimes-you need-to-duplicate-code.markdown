@@ -14,18 +14,34 @@ Yes, code duplication is the first rule to avoid when we try to provide clean co
 
 trait Context extends Scope{
    val usersManager = new UsersManager()
+   val userId = "some-id"
+   val user  = User(name = userId)
 }
 
 "User server" should {
    "login" should {   
      "returns not exist for non existing user" in new Context {
-        usersManager.byId("some-id") must beNotFound  
+        usersManager.byId(userId) must beNotFound  
      }
      "returns success for existing user" in new Context {
-        usersManager.create(User("some-id)) must beCreated
-        usersManager.byId("some-id") must beNotFound  
+        
+        usersManager.create(user) must beCreated
+        usersManager.byId(userId) must beUserLike(user)
      }
-   }   
+   }
+  "register" should {
+    "be created" in new Context {
+      usersManager.create(user) must beCreated
+      usersManager.byId(userId) must beUserLike(user)
+    }
+  }
+  "delete" should {
+    "beDeleted" in new Context {
+      usersManager.create(user) must beCreated
+      usersManager.delete(userId) must beDeleted
+      usersManager.byId(userId) must beNotFound
+    }
+  }
 }
 
 {% endhighlight %}
