@@ -23,4 +23,4 @@ github_username:  kfiron
 
 # Build settings
 markdown: kramdown
-theme: hyde
+theme: minima
