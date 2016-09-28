@@ -46,7 +46,7 @@ trait Context extends Scope{
 {% endhighlight %}
 
 <p>
-Obviousely, we have code duplication in usersManager.create() and usersManager.byId(), let's look in example of this code when we get rid of all code duplications
+Obviously, we have code duplication in usersManager.create() and usersManager.byId(), let's look in example of this code when we get rid of all code duplications
 </p>
 
 {% highlight java %}
