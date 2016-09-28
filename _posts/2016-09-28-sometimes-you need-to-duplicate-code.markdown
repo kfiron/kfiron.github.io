@@ -4,7 +4,6 @@ title:  "Sometimes you need to duplicate code"
 date:   2016-09-28 06:38:44 +0300
 categories: scala testing code
 ---
-asdsadsadasd
 <p>
 Yes, code duplication is the first rule to avoid when we try to provide clean code. In this post i will try to show i use case that you need to have a duplicate code, and it is OK.
 </p>
@@ -28,7 +27,20 @@ trait Context extends Scope{
         usersManager.create(user) must beCreated
         usersManager.byId(userId) must beUserLike(user)
      }
-   }  
+   }
+   "register" should {
+    "be created" in new Context {
+      usersManager.create(user) must beCreated
+      usersManager.byId(userId) must beUserLike(user)
+    }
+  }
+  "delete" should {
+    "beDeleted" in new Context {
+      usersManager.create(user) must beCreated
+      usersManager.delete(userId) must beDeleted
+      usersManager.byId(userId) must beNotFound
+    }
+  }
 }
 
 {% endhighlight %}
