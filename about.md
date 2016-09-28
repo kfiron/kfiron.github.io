@@ -13,6 +13,7 @@ I also like to talk in meetups and conferences, but mainly run talks around live
 I also love architecture and i spend my day to day job in this area.
 
 My personal life hobbies:
-- I am a cook, mainly Morrocoan/Thai/French - but i do more
-- Snooker player, not really professional, but i can't lose
-- I am doing sport, I love to run
+* I am a cook, mainly Morrocoan/Thai/French - but i do more
+* Snooker player, not really professional, but i can't lose
+* I am doing sport, I love to run
+* I use to play Poker, don't try me on the table
