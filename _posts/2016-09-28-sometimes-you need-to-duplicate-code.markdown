@@ -87,3 +87,49 @@ trait Context extends Scope{
 
 {% endhighlight %}
 
+<p>
+The problem with this code that we hide the API, the tests are the documents for our code, when someone opens your code and for example look at the login section he wants to undesrtands how to tirgger login, and he does not wants to follow the abstraction you created to avoid duplications.
+And definitely on tests that uses the login for verification that user is created then we need to see the semantic of the verficication.
+Also for tests that test the login we do want to see the semantics that user is created, and in this case we don't care how. So let's see a proposed solution
+</p>
+
+{% highlight java %}
+
+trait Context extends Scope{
+   val usersManager = new UsersManager()
+   val userId = randomId
+   val user  = User(name = userId)
+   def givenUser = usersManager.create(user)  
+   def verifyUserCreated = login(userId) must beCreated
+}
+
+"User server" should {
+   "login" should {   
+     "returns not exist for non existing user" in new Context {
+        usersManager.byId(userId) must beNotFound  
+     }
+     "returns success for existing user" in new Context {        
+        givenUser must beCreated
+        usersManager.byId(userId) must beUserLike(user)
+     }
+   }
+   "register" should {
+    "be created" in new Context {
+      usersManager.create(user)  must beCreated
+      usersManager.byId(userId) must beUserLike(user)
+    }
+  }
+  "delete" should {
+    "beDeleted" in new Context {
+      givenUser must beCreated
+      usersManager.delete(userId) must beDeleted
+      verifyUserCreated must beNotFound
+    }
+  }
+}
+
+{% endhighlight %}
+
+So now we have 2 types of code duplications:
+1. The login uses byId twice, because it is the API for this tests and we don't want to hide it
+2. The abstractions verifyUserCreated/givenUser is hide the API, which we are using in the same file. but we can use this abstraction in more tests in future.
