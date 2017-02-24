@@ -2,7 +2,7 @@
 layout: post
 title:  "Dont' abuse json with frameworks"
 date:   2017-02-24 12:38:44 +0300
-categories:  frameworks, json, magic, software engineering java
+categories:  frameworks json magic software engineering java
 ---
 <p>
 Who does not love JSON? nowadays json is defacto transport representation for payload of Ajax APIs, As well for Rest calls from server to server. it is almost native from Javascript in the client side, it is kind of compact (in comparison to XML), it is readable for human being - easy to debug (No need to decode/decrypt.. etc), it also descriptive and it helps your API to be self explains (in comparison to binary protocols".
