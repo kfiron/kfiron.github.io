@@ -4,24 +4,14 @@ title: About
 permalink: /about/
 ---
 <p>
-Currently the backeng engineering manager @ Wix.com. 
-Sometimes I love Scala and the type system, sometimes i love Node.js hacking. 
-I am not into front-end development, but i am enthusiastic about isomorphic code and server side rendereing using Node.js.
+Currently backeng engineering manager @ Wix.com. 
+I like to solve complex problems in software engineering, mainly problems around architecture. I am TDD lover, I don't believe that TDD gives you better design, because better design is not created from the test, it created from refactoring and from trying to make the code cleaner. But without TDD i would not be able to refactor without fear. 
 </p>
 <p>
-I also like to talk in meetups and conferences, but mainly run talks around live coding, i believe that live coding can give the audience the hightest value in 40 minutes.
+Few more facts about me:
 </p>
+* I love type safety, however i hate it in a place we need to be too dynamic.
+* Don't talk to me about CAP theorem, i want to be consistent, avilable and partition tolerance
+* I believe that full stack developers are unicorns
+* I hate when people tells me: "This happens ocassionaly". Please be more deterministic
 
-<p>
-I also love architecture and i spend my day to day job in this area.
-</p>
-
-<p>
-My personal life hobbies:
-<ul>
-<li> I am a cook, mainly Morrocoan/Thai/French - but i do more </li>
-<li> Snooker player, not really professional, but i can't lose </li>
-<li> I am doing sport, I love to run </li>
-<li> I use to play Poker, don't try me on the table </li>
-</ul>
-</p>
