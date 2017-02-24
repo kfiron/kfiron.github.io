@@ -7,6 +7,7 @@ permalink: /about/
 Currently backeng engineering manager @ Wix.com. 
 I like to solve complex problems in software engineering, mainly problems around architecture. I am TDD lover, I don't believe that TDD gives you better design, because better design is not created from the test, it created from refactoring and from trying to make the code cleaner. But without TDD i would not be able to refactor without fear. 
 </p>
+![alt text](https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/886427_10151325867026219_2146646739_o.jpg?oh=443cfd28ed4c964a8a1b966237481ef5&oe=5971C8A1"This is me")
 <p>
 Few more facts about me:
 </p>
