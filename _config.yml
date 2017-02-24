@@ -24,3 +24,5 @@ github_username:  kfiron
 # Build settings
 markdown: kramdown
 theme: minima
+
+comments: true
