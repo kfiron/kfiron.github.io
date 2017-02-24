@@ -62,12 +62,12 @@ Even Spring (Which i am sure you hate - and if you don't ask me why) has the cap
 
 <p>
 Looks awesome, now all i need to do it to create a class and BOOM, i have this magic. BUT... Like any other goodies, it has its tradeoffs:
-# If we want different name for our domain object from the one in the json (because javascript developer likes undescores), yes we can pollute the class and annotate. 
-# Let's say that are getting more parameters, JSON breaks (yes we can annotate here - @IgnoreUnknown, pollute the domain again
-# This approach natively leads towards leaky abstraction, where the object from the transport being used in our internal core services. Yes, we can create transformers, but developer can make this mistake.
-# Jackson support custom ser/deser handlers, so different users can treat different complex object differently on the transport. We using the class as our IDL, but since this IDL does not contains only primitives it may be not be read properly between different clients/servers. For example Scala Enumaration by default ser to an object with few properties. Now let's explain this to the client developers, he now need to care about different acosystem? All they asked is to pass a json which is an object that may contains another object that may contains some primitives.
-
 </p>
+* If we want different name for our domain object from the one in the json (because javascript developer likes undescores), yes we can pollute the class and annotate. 
+* Let's say that are getting more parameters, JSON breaks (yes we can annotate here - @IgnoreUnknown, pollute the domain again
+* This approach natively leads towards leaky abstraction, where the object from the transport being used in our internal core services. Yes, we can create transformers, but developer can make this mistake.
+* Jackson support custom ser/deser handlers, so different users can treat different complex object differently on the transport. We using the class as our IDL, but since this IDL does not contains only primitives it may be not be read properly between different clients/servers. For example Scala Enumaration by default ser to an object with few properties. Now let's explain this to the client developers, he now need to care about different acosystem? All they asked is to pass a json which is an object that may contains another object that may contains some primitives.
+
 <p>
 I want to tell you that are not using JSON! You are using framework that gives you nice hello-world capability, you are getting out of the box a magic, which you will pay in future as long as the APIs and the domain evoloves. You are violating the basic rule of separation of concern. A parser is something that do parsing, and a domain object is object that you use in your services to represent info. Don't combine them.
 </p>
