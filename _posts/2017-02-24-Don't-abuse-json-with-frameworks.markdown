@@ -2,6 +2,7 @@
 layout: posts
 title:  "Don't abuse JSON with frameworks"
 date:   2017-02-24 12:38:44 +0300
+comments: true
 categories:  frameworks json magic software engineering java
 ---
 <p>
