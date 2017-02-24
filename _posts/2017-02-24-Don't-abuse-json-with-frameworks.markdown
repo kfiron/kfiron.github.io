@@ -14,7 +14,7 @@ There are tones of libraries that hadles JSON in the JVM ecosystem. The most int
 The problem is that develoeprs trying to be too smart, and trying to make our life easier, they thinks that they can make our life aasier.  
 </p>
 
-#  give the following json for users api
+#  given the following json for users api
 {% highlight json %}
 
     { 
