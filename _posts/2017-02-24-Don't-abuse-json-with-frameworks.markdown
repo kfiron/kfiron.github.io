@@ -44,7 +44,7 @@ Let's take a loot at Jackson (One of the most common libraries in JAVA), it has 
 {% endhighlight %}
 
 <p>
-Even Spring (Which i am sure you hate) has the capablity to let you read parameters from controller as object which are mapped from JSON, as well using Jackson by default
+Even Spring (Which i am sure you hate - and if you don't ask me why) has the capablity to let you read parameters from controller as object which are mapped from JSON, as well using Jackson by default
 </p>
 
 {% highlight java %}
