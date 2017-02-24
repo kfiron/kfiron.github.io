@@ -2,6 +2,7 @@
 layout: posts
 title:  "Sometimes you need to duplicate code"
 date:   2016-09-28 06:38:44 +0300
+comments: true
 categories: scala testing code
 ---
 <p>
