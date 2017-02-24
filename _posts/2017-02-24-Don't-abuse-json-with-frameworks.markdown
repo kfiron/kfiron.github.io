@@ -70,7 +70,7 @@ Looks awesome, now all i need to do it to create a class and BOOM, i have this m
 * Custom ser/deser are hidden, you hide the most important part of your application, you hide the way your application is talking to another system. I want to see on a single place how my object model transforms into a JSON, this is my contract to with the world.
 
 <p>
-I want to tell you that are not using JSON! You are using framework that gives you nice hello-world capability, you are getting out of the box a magic, which you will pay in future as long as the APIs and the domain evoloves. <B>You are violating the basic rule of separation of concerns</b>. A parser is something that do parsing, and a domain object is object that you use in your services to represent info. Don't combine them.
+I want to tell you that are not using JSON! You are using framework that gives you nice hello-world capability, you are getting out of the box a magic, which you will pay in future as long as the APIs and the domain evoloves. <B>You are violating the basic rule of separation of concerns</b>. A parser is something that does parsing, and a domain object is object that you use in your services to represent info. Don't combine them.
 </p>
 <p>
 Let's say i am reading an existing API and i care only about name and email
