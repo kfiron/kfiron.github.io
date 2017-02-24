@@ -15,11 +15,11 @@ The problem is that develoeprs trying to be too smart, and trying to make our li
 </p>
 
 #  give the following json for users api
-{% highlight javascript %}
+{% highlight json %}
 
     { 
       "name": "Kfir Bloch",
-      "email": "i-will-not-tell-you@go-to-hell.com"
+      "email": "i-will-not-tell-you@go-to-hell.com",
       "age": 40
      }
       
