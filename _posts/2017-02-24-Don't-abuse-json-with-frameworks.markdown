@@ -5,10 +5,10 @@ date:   2017-02-24 12:38:44 +0300
 categories:  frameworks, json, magic, software engineering java
 ---
 <p>
-Who does not love json? nowdays json is the defacto transport representation for payload of Ajax APIs. it is almost native from Javascript in the client side, it is kind of compact (in comparisson to XML), it is readable for human being - easy to debug and see the usage, it also descriptive and it helps your API to be self explains (in comparisson to binary protocols".
+Who does not love JSON? nowadays json is defacto transport representation for payload of Ajax APIs, As well for Rest calls from server to server. it is almost native from Javascript in the client side, it is kind of compact (in comparison to XML), it is readable for human being - easy to debug (No need to decode/decrypt.. etc), it also descriptive and it helps your API to be self explains (in comparison to binary protocols".
 </p>
 <p>
-There are tones of libraries to hadle json from the JVM ecosystem. The most intuitive thing i am thinking of when i want to read json is to represent it as AST, and be able to "swim" between the elements and read them by name.
+There are tones of libraries that hadles JSON in the JVM ecosystem. The most intuitive thing I am thinking of when i want to read json is to represent it as AST, and be able to "swim" between the elements and read them by name. To be more correct it is an AST for deterministic list of types: String, Int, null, boolean, Object(which contains the primitives and or more objects)
 </p>
 <p>
 The problem is that develoeprs trying to be too smart, and trying to make our life easier, they thinks that they can make our life aasier.  
@@ -26,7 +26,7 @@ The problem is that develoeprs trying to be too smart, and trying to make our li
 {% endhighlight %}
 
 <p>
-Let's take a loot at Jackson, it has option to give the library the stream of data and get a class that represents the fields by name
+Let's take a loot at Jackson (One of the most common libraries in JAVA), it has option to give the library the stream of data and get a class that represents the fields by name
 </p>
 
 {% highlight java %}
@@ -44,18 +44,35 @@ Let's take a loot at Jackson, it has option to give the library the stream of da
 {% endhighlight %}
 
 <p>
-Looks awesome, now all i need to do it to create class and BOOM, i have this magic. BUT... it comes with problems
-# If we want different name for our domain object from the one in the json (because JS developer likes undescores), yes we can polute the class and annotate
-# If we are getting more parameters, JSON breaks (yes we can annotate here - @IgnoreUnknown, polute the domain again
-# This kind of approach natively takes us towards the approach that this class will be used as our internal domain and will leak into our core services. Yes, we can create transformers, but developer can make this mistake.
-# Jackson support custom ser/deser handlers, so different users can treat different complex object differently on the transport. We using the class as our IDL, but since this IDL does not contains only primitives it may be not be read properly between different clients/server. For example Scala Enumaration by default ser to an object with few properties. Now let's explain this to the client developers, he now need to care about different acosystem?
+Even Spring (Which i am sure you hate) has the capablity to let you read parameters from controller as object which are mapped from JSON, as well using Jackson by default
+</p>
+
+{% highlight java %}
+
+ @Controller
+@RequestMapping("/api", RequestMethod.POST)
+ class UserController {
+    @RequestMapping("/post-user", RequestMethod.POST)
+    public Result postUser(@RequestBody User user){
+      // user use to be a json
+    }
+ }
+{% endhighlight %}
+
+
+<p>
+Looks awesome, now all i need to do it to create a class and BOOM, i have this magic. BUT... Like any other goodies, it has its tradeoffs:
+# If we want different name for our domain object from the one in the json (because javascript developer likes undescores), yes we can pollute the class and annotate. 
+# Let's say that are getting more parameters, JSON breaks (yes we can annotate here - @IgnoreUnknown, pollute the domain again
+# This approach natively leads towards leaky abstraction, where the object from the transport being used in our internal core services. Yes, we can create transformers, but developer can make this mistake.
+# Jackson support custom ser/deser handlers, so different users can treat different complex object differently on the transport. We using the class as our IDL, but since this IDL does not contains only primitives it may be not be read properly between different clients/servers. For example Scala Enumaration by default ser to an object with few properties. Now let's explain this to the client developers, he now need to care about different acosystem? All they asked is to pass a json which is an object that may contains another object that may contains some primitives.
 
 </p>
 <p>
-Let's me tell some something, you are not using JSON! You are using framework that gives you nice hello-world capability, you are getting out of the box a magic, which you will pay in future as long as the APIs and the domain evoloves.
+I want to tell you that are not using JSON! You are using framework that gives you nice hello-world capability, you are getting out of the box a magic, which you will pay in future as long as the APIs and the domain evoloves. You are violating the basic rule of separation of concern. A parser is something that do parsing, and a domain object is object that you use in your services to represent info. Don't combine them.
 </p>
 <p>
-Let's say i am reading existing API and i care only about name and email
+Let's say i am reading an existing API and i care only about name and email
 </p>
 
 {% highlight java %}
