@@ -12,7 +12,7 @@ It makes our program more readable.
 </p>
 <p>
 I have creates open source project for node.js users: 
-[scala-like-option](https://www.npmjs.com/package/scala-like-option)
+[a link](https://www.npmjs.com/package/scala-like-option).
 
 </p>
 <p>
