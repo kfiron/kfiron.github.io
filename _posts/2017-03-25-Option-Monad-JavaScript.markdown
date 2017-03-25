@@ -13,7 +13,7 @@ It makes our program more readable.
 <p>
 I have creates open source project for node.js users: 
 </p>
-[a link](https://www.npmjs.com/package/scala-like-option).
+[scala-like-option](https://www.npmjs.com/package/scala-like-option).
 <p>
 However when I published it a lot of develoeprs told me that this is not idiomatic way to handle nulls in Javascript in declarative manner.   
 </p>
