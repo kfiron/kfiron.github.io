@@ -11,7 +11,7 @@ By having such semantic we can do some declarative APIs like forEahc/Map/Fold...
 It makes our program more readable.
 </p>
 <p>
-I have creates open source project for node.js users: 
+I have creates open source project for node.js users : 
 </p>
 [scala-like-option](https://www.npmjs.com/package/scala-like-option).
 <p>
