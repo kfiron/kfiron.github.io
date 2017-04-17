@@ -5,7 +5,7 @@ description: bla bla
 permalink: /about/
 ---
 
-Developer, Manager, Architect (I hate this title). Currently leading the backend engineering in Wix.com.
+My name is Kfir Bloch, I am a Developer, Manager, Architect (I hate this title). Currently leading the backend engineering in Wix.com.
 
 
 Few more facts about me:
