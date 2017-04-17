@@ -27,4 +27,5 @@ theme: minima
 
 comments: true
 
-
+gems:
+  - jekyll-seo-tag
