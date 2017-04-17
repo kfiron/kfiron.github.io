@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kfir's presentations, slides of my talks
+title: Presentations 
 permalink: /presentations/
 ---
 
