@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Kfir Bloch](https://scontent-frt3-1.xx.fbcdn.net/v/t31.0-8/886427_10151325867026219_2146646739_o.jpg?oh=158a9581c88c0c2204be787fd3ff7e92&oe=599955A1){:class="img-responsive"}
 
 Developer, Manager, Architect (I hate this title). Currently leading the backend engineering in Wix.com.
 
