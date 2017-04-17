@@ -18,5 +18,5 @@ A throttling lib for rolling window for specific keys.
 
 # node-either-monad (node.js)
 A functional way to handle response from a function that returns either of two completely defferent objects
-[https://github.com/kfiron/node-either-monad](https://github.com/kfiorn/node-either-monad)
+[https://github.com/kfiron/node-either-monad](https://github.com/kfiron/node-either-monad)
 
