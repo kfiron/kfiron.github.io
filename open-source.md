@@ -14,7 +14,7 @@ Maybe monade for javascript, to avoid null checking and handling option containe
 
 # rolling-window-throttler (node.js)
 A throttling lib for rolling window for specific keys.
-[https://github.com/wix/rolling-window-throttler](https://github.com/wix/rolling-window-throttler)
+[https://github.com/wix/rolling-window-throttler-js](https://github.com/wix/rolling-window-throttler-js)
 
 # node-either-monad (node.js)
 A functional way to handle response from a function that returns either of two completely defferent objects
