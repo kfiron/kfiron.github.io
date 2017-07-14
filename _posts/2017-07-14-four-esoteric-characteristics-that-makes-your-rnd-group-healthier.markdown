@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "4 esoteric characteristics that makes your R&D group healthier"
+title:  "4 \"esoteric\" characteristics that makes your R&D group healthier"
 date:   2017-07-14 19:00:00 +0300
 comments: true
 categories:  culture innovation R&D
