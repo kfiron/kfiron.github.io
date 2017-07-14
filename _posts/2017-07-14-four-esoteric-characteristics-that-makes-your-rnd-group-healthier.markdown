@@ -10,7 +10,7 @@ categories:  culture innovation R&D
 As a developers and managers we always speak about technology and architecture. In this blog post i am talking about some "esoteric" characteristics that really makes your group much healthier.
 
 <p><b>1. Motivate by the business</b></p>
-<p>Motivation let people to get better results. This is the reason that you see runners in Marathons that gets better results on the marathon itself while on the training they gets less good results.
+<p>Motivation lets people to get better results. This is the reason that you see runners in Marathons that gets better results on the marathon itself while on the training they gets less good results.
 </p>
 <p>Developers should love the business, In the real world we cannot alway to use bleeding-edge technologies, so people should be motivated by the domain problem they are trying to solve and it will make them better. 
 </p>
