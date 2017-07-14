@@ -27,7 +27,7 @@ The problem with non-diverse environment that we hire people that are like us, a
 As engineers our day to day work is tight with full of deliveries and customers that wants more features. And we forgot the innovation because we think that the life does not give us space for doing innovation.
 </p>
 <p>
-This is 100% a lie. Innovation is not building autonomic car or building rocket that sent Mars. innovation can be any small thing that will make our life easier. 
+This is 100% a lie. Innovation is not about building autonomic car or building rocket that sent Mars. innovation can be any small thing that will make our life easier. 
 DRY (Don't repeat yourself) is not only for the code, we keep repeating doing stuff because of bad tooling and bad processes. A developer can make very small innovative things and make small innovative decisions that make our life easier, not repeating things is crucial.
 </p>
 <p>
