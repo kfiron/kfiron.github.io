@@ -25,7 +25,7 @@ As Scala/Java developers we are facing low feedback loop in development, compili
 While working with Node.JS i found myself very productive, because the fact that full test suite with 100 tests that each of them run new server takes less than a minutes.
 </p>
 <p>
-We can use much leaner containers and framework and we can gain better results, but in the end it is different by order of magnitude.</p>
+We can use much leaner containers and framework on the JVM and of course that we can gain better results, but in the end it is different from node.js speed by order of magnitude.</p>
 <p>
 <b>2. Extendable language</b>
 </p>
