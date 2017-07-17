@@ -12,7 +12,7 @@ let's see some more compelling reasons to adopt it in your organization.
 </p>
 
 <p>
-Before that a disclaimer: I am Scala/Java developer & I love the type system and still think that there are cases only for statically typed languages.
+Before that a disclaimer: <b>I am Scala/Java developer & I love the type system and still think that there are cases only for statically typed languages.</b>
 </p>
 
 <p>
