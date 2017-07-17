@@ -19,7 +19,7 @@ Before that a disclaimer: <b>I am Scala/Java developer & I love the type system 
 <b> 1. Fast feedback loop in development phase </b>
 </p>
 <p>
-As Scala/Java developers we are facing low feedback loop in development, compiling on each change to a file, and JVM load slowly, building the classpath, sometimes we are using things like Spring with bean scanning and unfortunately we sometimes using classpath scanning. By doing TDD we need to recompile the project every time we run the tests and running heavy http container. 
+As Scala/Java developers we are facing low feedback loop in development, compiling on each change, and JVM loads slowly, building the classpath, sometimes we are using things like Spring with bean scanning and unfortunately we sometimes using classpath scanning. By doing TDD we need to recompile the project every time we run the tests and running heavy http container. 
 </p>
 <p>
 While working with Node.JS i found myself very productive, because the fact that full test suite with 100 tests that each of them run new server takes less than a minutes.
