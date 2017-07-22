@@ -10,7 +10,7 @@ I hope that without read my explanation you'll should agree that meetings are ev
 Meetings culture leads to less delivery. Managers with calendar that is full are not available for ad hoc advice with their team members, they need to wait for the next “weekly meeting”, they will be less productive. 
 </p>
 <p>
-I believe in informal meetings, In this post of would like to share with you some tips to gain productivity by reduce meetings.
+I believe in informal meetings, In this post of would like to share with you some tips to gain productivity by reduce meetings or at least to make them much efficient.
 </p>
 <p><b>1. Meetings are not working time - they are sync time</b></p>
 <p>Efficient work can be done in pair with your colleague, without time constraints, informal, without ceremony, focus purely on the task, maybe on that time joining another colleague, maybe going to the DBA for another question. Informal pair work is flexy and let’s you get more efficient productive decisions. Then it is great to set formal meeting to sync on the results.
