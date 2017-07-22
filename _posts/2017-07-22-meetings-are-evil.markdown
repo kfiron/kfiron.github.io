@@ -38,7 +38,7 @@ Managers should not attend meeting as manager, unless they have meaningful contr
 If you some stakeholder.. Etc, you must not join the meeting. You will save this precious time and will be able to read the meeting summary afterwards. 
 </p>
 <p>
-Long ago when i was working in big corporate i was keep saying that “Anyone decides to join my meeting should know that he will get action item during that meeting”
+Long ago when i was working in big corporate i was keep saying that <b> “Anyone decides to join my meeting should know that he will get action item during that meeting”</b>
 </p>
 <p>
 <b>3. Meeting should be fairly small</b>
