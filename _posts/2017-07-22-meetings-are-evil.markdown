@@ -41,7 +41,7 @@ If you some stakeholder.. Etc, you must not join the meeting. You will save this
 Long ago when i was working in big corporate i was keep saying that <i> “Anyone that decides to join my meeting should know that the consequences are that he will end up with action item ”</i>
 </p>
 <p>
-<b>3. Meeting should be fairly small</b>
+<b>3. Meeting should have failt small amount of participants</b>
 <p>
 When there are large amount of people, not everyone are committed to the flow of the conversation, you often see people using their phones, and missing the important parts. Small group (3-4) inherently keeping you focus and much productive. Also in small meeting everyone can speak a lot and share freely their ideas.
 </p>
