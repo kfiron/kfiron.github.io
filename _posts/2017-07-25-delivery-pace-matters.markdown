@@ -79,7 +79,7 @@ If you do not find great small chunk with value for a new project, you may have 
 Summary:
 </p>
 <p>
-Develop fast does necessarily means that your coders in the organization are fast, it means that you choose to slice your project into tiny slices that are deliverable and have real business value, a t least from the beginning point of the project.
+Develop fast does necessarily means that your coders in the organization are fast, it means that you choose to slice your project into tiny slices that are deliverable and have real business value, at least from the beginning point of the project.
 </p>
 
 
