@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Code genration - the good, the bad & the ugly"
+title:  "Code generation - the good, the bad & the ugly"
 date:   2017-08-03 12:38:44 +0300
 comments: true
 categories:  reflection java
