@@ -1,10 +1,11 @@
 ---
 layout: posts
 title:  "Cache 101"
-date:   2017-08-11 10:38:44 +0300
+date:   2017-08-11 09:38:44 +0300
 comments: true
-categories:  cache
+categories:  cache cap performance
 ---
+
 <p>
 Let me start by tell you a secret: the most performant websites and applications are using some cache mechanism for their API responses. 
 </p>
@@ -13,7 +14,7 @@ When we think of cache the first thing we think of is a HashMap with data or Red
 </p>
 <p><b>
 “Cache is all about re-saving our data in a way that is optimised for read - A better fast view”
-</p></b>
+</b></p>
 
 <p>
 And in systems that designed for multi reads it will be worthwhile even from mathematical point of view. 
