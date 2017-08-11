@@ -1,0 +1,49 @@
+---
+layout: posts
+title:  "Cache 101"
+date:   2017-08-11 12:38:44 +0300
+comments: true
+categories:  cache CAP performance
+---
+
+<p>
+Let me start by tell you a secret: the most performant websites and applications are using some cache mechanism for their API responses. 
+</p>
+<p>
+When we think of cache the first thing we think of is a HashMap with data or Redis/Memcached. 
+</p>
+<p><b>
+“Cache is all about re-saving our data in a way that is optimised for read - A better fast view”
+</p></b>
+
+<p>
+And in systems that designed for multi reads it will be worthwhile even from mathematical point of view. 
+</p>
+<p>
+Beside the trivial way of caching such as memory/redis, I can tell you that CQRS is also a cache, the idea that data is kept twice, by having sort of pre-baked tables act as views, this is also a cache. 
+</p>
+<p>
+Having cache is not only helpful for fast response, it sometimes increases your availability, reducing I/O calls to database, You can get better resiliency by avoiding extra hop to the database. 
+</p>
+<p>
+Let’s go over 3 design considerations which I think are the most important:
+</p>
+<p><b>1. Consistency level of the views - SLA</b></p>
+<p>
+Saving the view is sometimes costly, when designing a cache we need to understand what is the SLA for that view, for example let’s look at bank transaction, will it be OK that query my balance may be good enough without the last 15 minutes actions? It all boils down into CAP theorem. 
+For example MySql database secondary indexes are transactional fully consistent “cache”. If the insert function returned without error, we can perform another query on the index. 
+</p>
+
+<p><b>2. Source of truth</b></p>
+<p>There is only one single source of truth, placed in resilient store. Some cache stores are in memory, or using local disks on the application server which are inherently transient. The rule is: “We can delete all cached data at any given time and the system must work fairly normal”. 
+</p>
+<p><b>3. Correctness of the data - Self healing </p></b>
+<p>Indexes can lose the data, can miss some events and might be inconsistent to the authoritative store. Why? Because performing non transactional actions will lead at some point in time to lose of messages. When implementing cache we need somehow mechanism for evaluate the truth of the data. It can be done in plenty ways:
+</p>
+<p>- Versioning of the events if we have CQRS </p>
+<p>- Periodical/lazy counts </p>
+<p>- Lazy check on requests every X time from last check - depends on SLA constraint </p>
+<p>- We may want to rebuild the whole index every X minutes - Depends on the size </p>
+
+<p><b>Summary:</p></b>
+<p>As a developers our job is to strive for fast and resilient response for our APIs and to stop think naively. Cache is great, if you know your SLA and you think you can meet the consistency level the required SLA.</p>
