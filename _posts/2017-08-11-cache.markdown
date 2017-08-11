@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "Cache 101"
-date:   2017-08-10 09:38:44 +0300
+date:   2017-08-09 09:38:44 +0300
 comments: true
 categories:  cache cap performance
 ---
@@ -45,5 +45,5 @@ For example MySql database secondary indexes are transactional fully consistent 
 <p>- Lazy check on requests every X time from last check - depends on SLA constraint </p>
 <p>- We may want to rebuild the whole index every X minutes - Depends on the size </p>
 
-<p><b>Summary:</p></b>
+<p><b>Summary:</b></p>
 <p>As a developers our job is to strive for fast and resilient response for our APIs and to stop think naively. Cache is great, if you know your SLA and you think you can meet the consistency level the required SLA.</p>
